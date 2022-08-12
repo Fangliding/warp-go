@@ -30,7 +30,7 @@
 
 前台运行
 
-*Linux/Darwin/FreeBSD 默认以 daemon 形式启动 即后台进程*
+_Linux/Darwin/FreeBSD 默认以 daemon 形式启动 即后台进程_
 
 ```
 --foreground
@@ -93,7 +93,7 @@ Token      = <Cloudflare API Token>
 
 `KeepAlive` 字段就是 WireGuard 的 `PersistentKeepalive` 字段, 用于 NAT 后保持 UDP 会话活跃, 单位: 秒
 
-`AllowedIPs` 字段用于连接成功以后自动添加路由表, 默认生成的配置没有此项, 您可以配合 PostUPJ 脚本自动添加路由表, 也可以使用本字段 (由于`go-ini`的解析器问题 不支持多行`AllowedIPs` 请用 `,` 分隔多个 CIDR 条目)
+`AllowedIPs` 字段用于连接成功以后自动添加路由表, 默认生成的配置没有此项, 您可以配合 PostUp 脚本自动添加路由表, 也可以使用本字段
 
 ```
 [Peer]
@@ -106,13 +106,13 @@ KeepAlive = 30
 
 - Script 部分
 
-此部分注册时会不会自动生成, 需要手动追加到配置文件中
+此部分注册时会不会自动生成, 需要手动追加到配置文件中, 与 `WireGuard` 配置一样
 
-`PreUp` 字段用于初始化 `WireGuard-Go` 以前执行的命令行 (由于`go-ini`的解析器问题 不支持多行`PreUp` 请用 `;` 分隔多个命令行, 或保存为一个脚本)
+`PreUp` 字段用于初始化 `WireGuard-Go` 以前执行的命令行
 
-`PostUp` 字段用于连接成功以后执行的命令行 (由于`go-ini`的解析器问题 不支持多行`PostUp` 请用 `;` 分隔多个命令行, 或保存为一个脚本)
+`PostUp` 字段用于连接成功以后执行的命令行
 
-`PostDown` 字段用于程序退出前执行的命令行 (由于`go-ini`的解析器问题 不支持多行`PostDown` 请用 `;` 分隔多个命令行, 或保存为一个脚本)
+`PostDown` 字段用于程序退出前执行的命令行
 
 ```
 [Script]

@@ -87,13 +87,13 @@ Token      = <Cloudflare API Token>
 
 This section is automatically generated when you register
 
-`Endpoint` field only accepts the format `IP:port`. Domain names are not supported
+`Endpoint` field only accepts the format `IP:Port`. Domain names are not supported
 
 `Endpoint6` field is invalid, for informational purposes only
 
 `KeepAlive` field is the `PersistentKeepalive` field of WireGuard, used to keep the UDP session active after NAT
 
-`AllowedIPs` field is used to automatically add the routing table after the connection is successful. The default generated configuration does not have this option. You can automatically add the routing table with the PostUPJ script, or you can use this field (due to the parser problem of `go-ini` does not support Multiple lines of `AllowedIPs` use `,` to separate multiple CIDR entries)
+`AllowedIPs` field is used to automatically add the routing table after the connection is successful. The default generated configuration does not have this option. You can automatically add the routing table with the PostUp script, or you can use this field 
 
 ```
 [Peer]
@@ -106,13 +106,13 @@ KeepAlive = 30
 
 - Script section
 
-Will this part be automatically generated during registration? It needs to be manually appended to the configuration file
+This part will not automatically generated during registration, It needs to be manually appended to the configuration file, It is same as the `WireGuard` configuration file
 
-`PreUp` field is used to initialize the command line previously executed by `WireGuard-Go` (due to the parser problem of `go-ini` does not support multi-line `PreUp`, please separate multiple command lines with `;`, or save as one script)
+`PreUp` field is used to initialize the command line previously executed by `WireGuard-Go`
 
-`PostUp` field is used to execute the command line after the connection is successful (due to the parser problem of `go-ini`, multi-line `PostUp` is not supported, please use `;` to separate multiple command lines, or save it as a script)
+`PostUp` field is used to execute the command line after the connection is successful
 
-`PostDown` field is used for the command line executed before the program exits (due to the parser problem of `go-ini`, multi-line `PostDown` is not supported, please use `;` to separate multiple command lines, or save as a script)
+`PostDown` field is used for the command line executed before the program exits
 
 ```
 [Script]
