@@ -6,13 +6,16 @@
 
 ## Command line arguments
 
-Configuration file The default value is `warp.conf`
+Configuration file
+
+The default value is `warp.conf`
 
 ```
 --config <config file name>
 ```
 
 Register for WARP
+
 The configuration file is saved to `warp.conf` by default, and the location can be modified by the `--config` parameter
 
 ```
@@ -25,7 +28,9 @@ Register for WARP and upgrade to WARP+
 --register --license <WARP+ license>
 ```
 
-Running in the foreground Linux/Darwin/FreeBSD starts as a daemon by default, that is, a background process
+Running in the foreground
+
+_Linux/Darwin/FreeBSD starts as a daemon by default, that is, a background process_
 
 ```
 --foreground
@@ -82,13 +87,13 @@ Token      = <Cloudflare API Token>
 
 This section is automatically generated when you register
 
-The `Endpoint` field only accepts the format `IP:port`. Domain names are not supported
+`Endpoint` field only accepts the format `IP:port`. Domain names are not supported
 
-The `Endpoint6` field is invalid, for informational purposes only
+`Endpoint6` field is invalid, for informational purposes only
 
-The `KeepAlive` field is the `PersistentKeepalive` field of WireGuard, used to keep the UDP session active after NAT, unit: seconds
+`KeepAlive` field is the `PersistentKeepalive` field of WireGuard, used to keep the UDP session active after NAT
 
-The `AllowedIPs` field is used to automatically add the routing table after the connection is successful. The default generated configuration does not have this option. You can automatically add the routing table with the PostUPJ script, or you can use this field (due to the parser problem of `go-ini` does not support Multiple lines of `AllowedIPs` use `,` to separate multiple CIDR entries)
+`AllowedIPs` field is used to automatically add the routing table after the connection is successful. The default generated configuration does not have this option. You can automatically add the routing table with the PostUPJ script, or you can use this field (due to the parser problem of `go-ini` does not support Multiple lines of `AllowedIPs` use `,` to separate multiple CIDR entries)
 
 ```
 [Peer]
@@ -103,11 +108,11 @@ KeepAlive = 30
 
 Will this part be automatically generated during registration? It needs to be manually appended to the configuration file
 
-The `PreUp` field is used to initialize the command line previously executed by `WireGuard-Go` (due to the parser problem of `go-ini` does not support multi-line `PreUp`, please separate multiple command lines with `;`, or save as one script)
+`PreUp` field is used to initialize the command line previously executed by `WireGuard-Go` (due to the parser problem of `go-ini` does not support multi-line `PreUp`, please separate multiple command lines with `;`, or save as one script)
 
-The `PostUp` field is used to execute the command line after the connection is successful (due to the parser problem of `go-ini`, multi-line `PostUp` is not supported, please use `;` to separate multiple command lines, or save it as a script)
+`PostUp` field is used to execute the command line after the connection is successful (due to the parser problem of `go-ini`, multi-line `PostUp` is not supported, please use `;` to separate multiple command lines, or save it as a script)
 
-The `PostDown` field is used for the command line executed before the program exits (due to the parser problem of `go-ini`, multi-line `PostDown` is not supported, please use `;` to separate multiple command lines, or save as a script)
+`PostDown` field is used for the command line executed before the program exits (due to the parser problem of `go-ini`, multi-line `PostDown` is not supported, please use `;` to separate multiple command lines, or save as a script)
 
 ```
 [Script]
@@ -126,5 +131,4 @@ The `PostDown` field is used for the command line executed before the program ex
 
 - Contributing maintainer of this repository [@CoiaPrant](https://gitlab.com/CoiaPrant)
 
-
-*Translate by Google :D*
+*Translate by Google* :D
