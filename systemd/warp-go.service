@@ -1,0 +1,29 @@
+[Unit]
+Description=warp-go service
+After=network.target
+
+[Service]
+Type=simple
+User=root
+Restart=always
+RestartSec=20s
+LimitCPU=infinity
+LimitFSIZE=infinity
+LimitDATA=infinity
+LimitSTACK=infinity
+LimitCORE=infinity
+LimitRSS=infinity
+LimitNOFILE=infinity
+LimitAS=infinity
+LimitNPROC=infinity
+LimitMEMLOCKS=infinity
+LimitSIGPENDING=infinity
+LimitMSGQUEUE=infinity
+LimitRPTRIO=infinity
+LimitRTTIME=infinity
+WorkingDirectory=/opt/warp-go/
+ExecStart=/opt/warp-go/warp-go --config=/opt/warp-go/warp.conf --foreground
+Environment="LOG_LEVEL=verbose"
+
+[Install]
+WantedBy=multi-user.target
