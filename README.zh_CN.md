@@ -106,7 +106,7 @@ KeepAlive = 30
 
 - Script 部分
 
-此部分注册时会不会自动生成, 需要手动追加到配置文件中, 与 `WireGuard` 配置一样
+此部分注册时不会自动生成, 需要手动追加到配置文件中, 与 `WireGuard` 配置一样
 
 `PreUp` 字段用于初始化 `WireGuard-Go` 以前执行的命令行
 
