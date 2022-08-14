@@ -28,6 +28,52 @@
 --register --license <WARP+ license>
 ```
 
+注册 WARP Team
+
+Team 配置文件需要使用特别的方法获取, 敬请期待
+
+```
+--register --team-config <WARP Team Config>
+```
+
+注册 WARP 并 自定义设备名
+
+```
+--register --device-name <Device Name>
+```
+
+升级到 WARP+
+
+默认加载配置文件为`warp.conf` 可通过`--config`参数修改
+
+```
+--update --license <WARP+ license>
+```
+
+修改设备名
+
+默认加载配置文件为`warp.conf` 可通过`--config`参数修改
+
+```
+--update --device-name <Device Name>
+```
+
+升级到 WARP+ 并 修改设备名
+
+默认加载配置文件为`warp.conf` 可通过`--config`参数修改
+
+```
+--update --license <WARP+ license> --device-name <Device Name>
+```
+
+移除 WARP 设备 并 删除配置文件
+
+默认加载配置文件为`warp.conf` 可通过`--config`参数修改
+
+```
+--remove
+```
+
 前台运行
 
 _Linux/Darwin/FreeBSD 默认以 daemon 形式启动 即后台进程_
@@ -81,6 +127,7 @@ warp-go --foreground
 Device     = <Device ID>
 PrivateKey = <WireGuard Private Key>
 Token      = <Cloudflare API Token>
+Team       = <Boolean>
 ```
 
 - Peer 部分
@@ -94,6 +141,8 @@ Token      = <Cloudflare API Token>
 `KeepAlive` 字段就是 WireGuard 的 `PersistentKeepalive` 字段, 用于 NAT 后保持 UDP 会话活跃, 单位: 秒
 
 `AllowedIPs` 字段用于连接成功以后自动添加路由表, 默认生成的配置没有此项, 您可以配合 PostUp 脚本自动添加路由表, 也可以使用本字段
+
+_不填写 `AllowedIPs` 字段就相当于 `Table=off`_
 
 ```
 [Peer]

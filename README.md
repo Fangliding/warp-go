@@ -22,10 +22,56 @@ The configuration file is saved to `warp.conf` by default, and the location can 
 --register
 ```
 
+Register WARP and customize device name
+
+```
+--register --device-name <Device Name>
+```
+
+Sign up for WARP Team
+
+Team configuration files need to be obtained using a special method, so stay tuned
+
+```
+--register --team-config <WARP Team Config>
+```
+
 Register for WARP and upgrade to WARP+
 
 ```
 --register --license <WARP+ license>
+```
+
+Upgrade to WARP+
+
+The default loading configuration file is `warp.conf`, which can be modified by the `--config` parameter
+
+```
+--update --license <WARP+ license>
+```
+
+Change device name
+
+The default loading configuration file is `warp.conf`, which can be modified by the `--config` parameter
+
+```
+--update --device-name <Device Name>
+```
+
+Upgrade to WARP+ and change device name
+
+The default loading configuration file is `warp.conf`, which can be modified by the `--config` parameter
+
+```
+--update --license <WARP+ license> --device-name <Device Name>
+```
+
+Remove the WARP device and delete the configuration file
+
+The default loading configuration file is `warp.conf`, which can be modified by the `--config` parameter
+
+```
+--remove
 ```
 
 Running in the foreground
@@ -81,6 +127,7 @@ This part will be automatically generated during registration, please do not mod
 Device     = <Device ID>
 PrivateKey = <WireGuard Private Key>
 Token      = <Cloudflare API Token>
+Team       = <Boolean>
 ```
 
 - Peer section
@@ -93,7 +140,9 @@ This section is automatically generated when you register
 
 `KeepAlive` field is the `PersistentKeepalive` field of WireGuard, used to keep the UDP session active after NAT
 
-`AllowedIPs` field is used to automatically add the routing table after the connection is successful. The default generated configuration does not have this option. You can automatically add the routing table with the PostUp script, or you can use this field 
+`AllowedIPs` field is used to automatically add the routing table after the connection is successful. The default generated configuration does not have this option. You can automatically add the routing table with the PostUp script, or you can use this field
+
+_Not filling in the `AllowedIPs` field is equivalent to `Table=off`_
 
 ```
 [Peer]
@@ -131,4 +180,4 @@ This part will not automatically generated during registration, It needs to be m
 
 - Contributing maintainer of this repository [@CoiaPrant](https://gitlab.com/CoiaPrant)
 
-*Translate by Google* :D
+_Translate by Google_ :D
