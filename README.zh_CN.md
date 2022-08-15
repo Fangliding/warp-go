@@ -174,7 +174,7 @@ KeepAlive = 30
 
 - Cloudflare 与 `ProjectWARP` 项目组拥有本项目的最终解释权
 - 使用本项目即代表您同意 Cloudflare WARP 用户协议, 并承担一切违规使用的责任与后果
-- 本项目基于 `MIT` 协议开源, 为了避免 DMCA, 本储存库不存放任何相关源代码, 如果您有需要可以 Email 到 `coiaprant@gmail.com` 获取源代码
+- 本项目基于 `MIT` 协议开源, 为了避免 DMCA 以及 滥用, 本储存库不存放任何获取 `Reserved` 字段相关源代码
 - 如果您愿意加入 `ProjectWARP` 项目组, 可以 Email 到 `coiaprant@gmail.com` , 并附上您的 GitLab 用户名, 我们将在审核您的个人主页之后给予答复 (如果您在其他平台有相关储存库也请一并附上链接)
 - 甬哥抄抄抄 (kkkyg) 请自觉远离本项目
 
