@@ -30,7 +30,9 @@
 
 注册 WARP Team
 
-Team 配置文件需要使用特别的方法获取, 敬请期待
+Team 配置文件需要使用特别的方法获取,
+
+请访问 [Warp Team Api](https://warp-team-api.herokuapp.com) 获取 `Token` 作为 `Team Config`
 
 ```
 --register --team-config <WARP Team Config>
@@ -134,6 +136,8 @@ Team       = <Boolean>
 
 此部分注册时会自动生成
 
+`PublicKey` 字段无效, 仅供参考
+
 `Endpoint` 字段仅接受 `IP:端口` 的格式 不支持域名
 
 `Endpoint6` 字段无效, 仅供参考
@@ -146,6 +150,7 @@ _不填写 `AllowedIPs` 字段就相当于 `Table=off`_
 
 ```
 [Peer]
+PublicKey = <Warp Endpoint Public Key>
 Endpoint  = <Warp Endpoint>
 Endpoint6 = <Warp Endpoint V6>
 KeepAlive = 30

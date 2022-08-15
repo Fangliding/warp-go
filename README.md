@@ -30,7 +30,9 @@ Register WARP and customize device name
 
 Sign up for WARP Team
 
-Team configuration files need to be obtained using a special method, so stay tuned
+Team configuration files need to be obtained using a special method
+
+Please visit [Warp Team Api](https://warp-team-api.herokuapp.com) to get `Token` as `Team Config`
 
 ```
 --register --team-config <WARP Team Config>
@@ -134,9 +136,11 @@ Team       = <Boolean>
 
 This section is automatically generated when you register
 
+`PublicKey` field will not be used, for informational purposes only
+
 `Endpoint` field only accepts the format `IP:Port`. Domain names are not supported
 
-`Endpoint6` field is invalid, for informational purposes only
+`Endpoint6` field will not be used, for informational purposes only
 
 `KeepAlive` field is the `PersistentKeepalive` field of WireGuard, used to keep the UDP session active after NAT
 
@@ -146,6 +150,7 @@ _Not filling in the `AllowedIPs` field is equivalent to `Table=off`_
 
 ```
 [Peer]
+PublicKey = <Warp Endpoint Public Key>
 Endpoint  = <Warp Endpoint>
 Endpoint6 = <Warp Endpoint V6>
 KeepAlive = 30
