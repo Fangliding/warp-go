@@ -84,13 +84,23 @@ _Linux/Darwin/FreeBSD starts as a daemon by default, that is, a background proce
 --foreground
 ```
 
-print help information
+Generate `WireGuard` configuration file
+
+The default loading configuration file is `warp.conf`, which can be modified by the `--config` parameter
+
+WARNING: Do not use `--remove` to uninstall after build, and save your `warp-go` and `WireGuard` configuration files
+
+````
+--export-wireguard <File Name>
+````
+
+Print help guide
 
 ```
 -h
 ```
 
-Print version number and copyright information
+Print version and copyright
 
 ```
 -v

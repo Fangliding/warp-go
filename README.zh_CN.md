@@ -84,6 +84,16 @@ _Linux/Darwin/FreeBSD 默认以 daemon 形式启动 即后台进程_
 --foreground
 ```
 
+生成 `WireGuard` 配置文件
+
+默认加载配置文件为`warp.conf` 可通过`--config`参数修改
+
+注意: 生成完成后不要使用 `--remove` 卸载, 并保存好您的 `warp-go` 和 `WireGuard` 配置文件
+
+```
+--export-wireguard <File Name>
+```
+
 打印帮助信息
 
 ```
