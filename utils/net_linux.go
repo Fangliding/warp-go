@@ -62,23 +62,23 @@ func RemoveRoute(endpoint string, fwmark uint32) (er error) {
 	}
 
 	if fwmark != 0 {
-		err := exec.Command("/sbin/ip", "-4", "rule", "delete", "not", "fwmark", strconv.Itoa(int(fwmark)), "table", "50000").Run()
-		if err != nil {
-			er = err
-		}
-
 		err = exec.Command("/sbin/ip", "-6", "rule", "delete", "not", "fwmark", strconv.Itoa(int(fwmark)), "table", "50000").Run()
 		if err != nil {
 			er = err
 		}
+
+		err := exec.Command("/sbin/ip", "-4", "rule", "delete", "not", "fwmark", strconv.Itoa(int(fwmark)), "table", "50000").Run()
+		if err != nil {
+			er = err
+		}
 	}
 
-	err = exec.Command("/sbin/ip", "-4", "rule", "delete", "table", "main", "suppress_prefixlength", "0").Run()
+	err = exec.Command("/sbin/ip", "-6", "rule", "delete", "table", "main", "suppress_prefixlength", "0").Run()
 	if err != nil {
 		er = err
 	}
 
-	err = exec.Command("/sbin/ip", "-6", "rule", "delete", "table", "main", "suppress_prefixlength", "0").Run()
+	err = exec.Command("/sbin/ip", "-4", "rule", "delete", "table", "main", "suppress_prefixlength", "0").Run()
 	if err != nil {
 		er = err
 	}
