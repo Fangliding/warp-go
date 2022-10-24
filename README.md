@@ -191,7 +191,7 @@ This part will not automatically generated during registration, It needs to be m
 - By using this project, you agree to the Cloudflare WARP User Agreement and assume all responsibilities and consequences for illegal use
 - This project is open source based on the `MIT` protocol. To avoid DMCA and abuse, this repository does not store any source code related to obtaining the `Reserved` field
 - If you are willing to join the `ProjectWARP` project group, you can Email to `coiaprant@gmail.com` with your GitLab username, we will reply after reviewing your profile (if you have related information on other platforms Please include a link to the repository as well)
-- Brother Yong Copy Copy (kkkyg) Please consciously stay away from this project
+- [MisakaNo (ZhongZhiYuan)](https://rip.wiki/wiki/zzy) Please consciously stay away from this project
 
 - Contributing maintainer of this repository [@CoiaPrant](https://gitlab.com/CoiaPrant)
 
