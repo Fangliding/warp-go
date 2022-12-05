@@ -56,7 +56,7 @@ func SetRouteTable(name, endpoint string, fwmark uint32, dests ...netip.Prefix) 
 }
 
 func RemoveRoute(endpoint string, fwmark uint32) (er error) {
-	err := exec.Command("/sbin/ip", "route", "delete", "table", "50000").Run()
+	err := exec.Command("/sbin/ip", "route", "flush", "table", "50000").Run()
 	if err != nil {
 		er = err
 	}

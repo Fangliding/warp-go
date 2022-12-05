@@ -94,6 +94,18 @@ _Linux/Darwin/FreeBSD 默认以 daemon 形式启动 即后台进程_
 --export-wireguard <File Name>
 ```
 
+生成 `Sing-Box` Socks 配置文件
+
+默认加载配置文件为`warp.conf` 可通过`--config`参数修改
+
+注意: 生成完成后不要使用 `--remove` 卸载, 并保存好您的 `warp-go` 和 `Sing-Box` 配置文件
+
+> Socks 监听地址为 127.0.0.1:2000
+
+```
+--export-singbox <File Name>
+```
+
 打印帮助信息
 
 ```
@@ -191,6 +203,5 @@ KeepAlive = 30
 - 使用本项目即代表您同意 Cloudflare WARP 用户协议, 并承担一切违规使用的责任与后果
 - 本项目基于 `MIT` 协议开源, 为了避免 DMCA 以及 滥用, 本储存库不存放任何获取 `Reserved` 字段相关源代码
 - 如果您愿意加入 `ProjectWARP` 项目组, 可以 Email 到 `coiaprant@gmail.com` , 并附上您的 GitLab 用户名, 我们将在审核您的个人主页之后给予答复 (如果您在其他平台有相关储存库也请一并附上链接)
-- [MisakaNo (钟致远)](https://rip.wiki/wiki/zzy) 请自觉远离本项目
 
 - 本仓库贡献维护者 [@CoiaPrant](https://gitlab.com/CoiaPrant)

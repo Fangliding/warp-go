@@ -90,9 +90,21 @@ The default loading configuration file is `warp.conf`, which can be modified by 
 
 WARNING: Do not use `--remove` to uninstall after build, and save your `warp-go` and `WireGuard` configuration files
 
-````
+```
 --export-wireguard <File Name>
-````
+```
+
+Generate `Sing-Box` Socks configuration file
+
+The default loaded configuration file is `warp.conf`, which can be modified by the `--config` parameter
+
+Note: Do not use `--remove` to uninstall after the build is complete, and save your `warp-go` and `Sing-Box` configuration files
+
+> Socks listening address is 127.0.0.1:2000
+
+```
+--export-singbox <File Name>
+```
 
 Print help guide
 
@@ -191,7 +203,6 @@ This part will not automatically generated during registration, It needs to be m
 - By using this project, you agree to the Cloudflare WARP User Agreement and assume all responsibilities and consequences for illegal use
 - This project is open source based on the `MIT` protocol. To avoid DMCA and abuse, this repository does not store any source code related to obtaining the `Reserved` field
 - If you are willing to join the `ProjectWARP` project group, you can Email to `coiaprant@gmail.com` with your GitLab username, we will reply after reviewing your profile (if you have related information on other platforms Please include a link to the repository as well)
-- [MisakaNo (ZhongZhiYuan)](https://rip.wiki/wiki/zzy) Please consciously stay away from this project
 
 - Contributing maintainer of this repository [@CoiaPrant](https://gitlab.com/CoiaPrant)
 
