@@ -32,7 +32,7 @@ Sign up for WARP Team
 
 Team configuration files need to be obtained using a special method
 
-Please visit [Warp Team Api](https://warp-team-api.herokuapp.com) to get `Token` as `Team Config`
+Please visit [Warp Team Api](https://web--public--warp-team-api--coia-mfs4.code.run) to get `Token` as `Team Config`
 
 ```
 --register --team-config <WARP Team Config>
@@ -207,3 +207,7 @@ This part will not automatically generated during registration, It needs to be m
 - Contributing maintainer of this repository [@CoiaPrant](https://gitlab.com/CoiaPrant)
 
 _Translate by Google_ :D
+
+# Donate
+
+- USDT TRC20 Address `TNU2wK4yieGCWUxezgpZhwMHmLnRnXRtmu`

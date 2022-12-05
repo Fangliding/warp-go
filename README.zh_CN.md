@@ -32,7 +32,7 @@
 
 Team 配置文件需要使用特别的方法获取,
 
-请访问 [Warp Team Api](https://warp-team-api.herokuapp.com) 获取 `Token` 作为 `Team Config`
+请访问 [Warp Team Api](https://web--public--warp-team-api--coia-mfs4.code.run) 获取 `Token` 作为 `Team Config`
 
 ```
 --register --team-config <WARP Team Config>
@@ -205,3 +205,7 @@ KeepAlive = 30
 - 如果您愿意加入 `ProjectWARP` 项目组, 可以 Email 到 `coiaprant@gmail.com` , 并附上您的 GitLab 用户名, 我们将在审核您的个人主页之后给予答复 (如果您在其他平台有相关储存库也请一并附上链接)
 
 - 本仓库贡献维护者 [@CoiaPrant](https://gitlab.com/CoiaPrant)
+
+# 赞助
+
+- USDT TRC20 地址 `TNU2wK4yieGCWUxezgpZhwMHmLnRnXRtmu`
