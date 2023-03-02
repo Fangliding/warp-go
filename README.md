@@ -68,6 +68,16 @@ The default loading configuration file is `warp.conf`, which can be modified by 
 --update --license <WARP+ license> --device-name <Device Name>
 ```
 
+Reset Private Key
+
+The default loaded configuration file is `warp.conf`, which can be modified by the `--config` parameter
+
+```
+
+--update --reset-key
+
+```
+
 Remove the WARP device and delete the configuration file
 
 The default loading configuration file is `warp.conf`, which can be modified by the `--config` parameter
@@ -151,7 +161,20 @@ This part will be automatically generated during registration, please do not mod
 Device     = <Device ID>
 PrivateKey = <WireGuard Private Key>
 Token      = <Cloudflare API Token>
-Team       = <Boolean>
+Type       = <free / plus / team>
+```
+
+- Device section
+
+This section is automatically generated when you sign up
+
+`Name` TUN device name, default value is `WARP`
+`MTU` TUN device MTU, default value is `1280`
+
+```
+[Device]
+Name = WARP
+MTU=1280
 ```
 
 - Peer section

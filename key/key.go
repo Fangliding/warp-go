@@ -6,11 +6,10 @@ import (
 	"encoding/base64"
 
 	"golang.org/x/crypto/curve25519"
+	"golang.zx2c4.com/wireguard/device"
 )
 
-const KeyLength = 32
-
-type Key [KeyLength]byte
+type Key [device.NoisePrivateKeySize]byte
 
 func (k *Key) String() string {
 	return base64.StdEncoding.EncodeToString(k[:])
@@ -22,13 +21,13 @@ func (k *Key) IsZero() bool {
 }
 
 func (k *Key) Public() *Key {
-	var p [KeyLength]byte
-	curve25519.ScalarBaseMult(&p, (*[KeyLength]byte)(k))
+	var p [device.NoisePublicKeySize]byte
+	curve25519.ScalarBaseMult(&p, (*[device.NoisePrivateKeySize]byte)(k))
 	return (*Key)(&p)
 }
 
 func NewPresharedKey() (*Key, error) {
-	var k [KeyLength]byte
+	var k [device.NoisePresharedKeySize]byte
 	_, err := rand.Read(k[:])
 	if err != nil {
 		return nil, err

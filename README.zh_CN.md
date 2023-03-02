@@ -66,6 +66,16 @@ Team 配置文件需要使用特别的方法获取,
 
 ```
 --update --license <WARP+ license> --device-name <Device Name>
+
+
+重置Private Key
+
+默认加载配置文件为`warp.conf` 可通过`--config`参数修改
+
+```
+
+--update --reset-key
+
 ```
 
 移除 WARP 设备 并 删除配置文件
@@ -73,7 +83,9 @@ Team 配置文件需要使用特别的方法获取,
 默认加载配置文件为`warp.conf` 可通过`--config`参数修改
 
 ```
+
 --remove
+
 ```
 
 前台运行
@@ -81,7 +93,9 @@ Team 配置文件需要使用特别的方法获取,
 _Linux/Darwin/FreeBSD 默认以 daemon 形式启动 即后台进程_
 
 ```
+
 --foreground
+
 ```
 
 生成 `WireGuard` 配置文件
@@ -91,7 +105,9 @@ _Linux/Darwin/FreeBSD 默认以 daemon 形式启动 即后台进程_
 注意: 生成完成后不要使用 `--remove` 卸载, 并保存好您的 `warp-go` 和 `WireGuard` 配置文件
 
 ```
+
 --export-wireguard <File Name>
+
 ```
 
 生成 `Sing-Box` Socks 配置文件
@@ -103,19 +119,25 @@ _Linux/Darwin/FreeBSD 默认以 daemon 形式启动 即后台进程_
 > Socks 监听地址为 127.0.0.1:2000
 
 ```
+
 --export-singbox <File Name>
+
 ```
 
 打印帮助信息
 
 ```
+
 -h
+
 ```
 
 打印版本号和版权信息
 
 ```
+
 -v
+
 ```
 
 ## 用法
@@ -123,13 +145,17 @@ _Linux/Darwin/FreeBSD 默认以 daemon 形式启动 即后台进程_
 1.先向 WARP 服务器进行注册 如果有 WARP+ License 可以带上 `--license` 参数
 
 ```
+
 warp-go --register
+
 ```
 
 2.启动 Warp-Go
 
 ```
+
 warp-go --foreground
+
 ```
 
 ## 注意事项
@@ -147,11 +173,28 @@ warp-go --foreground
 此部分注册时会自动生成, 请勿修改
 
 ```
+
 [Account]
-Device     = <Device ID>
+Device = <Device ID>
 PrivateKey = <WireGuard Private Key>
-Token      = <Cloudflare API Token>
-Team       = <Boolean>
+Token = <Cloudflare API Token>
+Type = <free / plus / team>
+
+```
+
+- Device 部分
+
+此部分注册时会自动生成
+
+`Name` TUN 设备名称, 默认值为 `WARP`
+`MTU` TUN 设备 MTU, 默认值为 `1280`
+
+```
+
+[Device]
+Name = WARP
+MTU = 1280
+
 ```
 
 - Peer 部分
@@ -171,13 +214,15 @@ Team       = <Boolean>
 _不填写 `AllowedIPs` 字段就相当于 `Table=off`_
 
 ```
+
 [Peer]
 PublicKey = <Warp Endpoint Public Key>
-Endpoint  = <Warp Endpoint>
+Endpoint = <Warp Endpoint>
 Endpoint6 = <Warp Endpoint V6>
 KeepAlive = 30
 
 #AllowedIPs = 0.0.0.0/0, ::/0
+
 ```
 
 - Script 部分
@@ -191,10 +236,12 @@ KeepAlive = 30
 `PostDown` 字段用于程序退出前执行的命令行
 
 ```
+
 [Script]
-#PreUp  = <Command>
+#PreUp = <Command>
 #PostUP = <Command>
 #PostDown = <Command>
+
 ```
 
 ## 版权声明
@@ -209,3 +256,4 @@ KeepAlive = 30
 # 赞助
 
 - USDT TRC20 地址 `TNU2wK4yieGCWUxezgpZhwMHmLnRnXRtmu`
+```

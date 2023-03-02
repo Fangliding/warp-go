@@ -33,7 +33,6 @@ func SetRouteTable(name, endpoint string, fwmark uint32, dests ...netip.Prefix) 
 		er = err
 		return
 	}
-	
 
 	if string(gw) == "" {
 		er = errors.New("failed to get gateway")
